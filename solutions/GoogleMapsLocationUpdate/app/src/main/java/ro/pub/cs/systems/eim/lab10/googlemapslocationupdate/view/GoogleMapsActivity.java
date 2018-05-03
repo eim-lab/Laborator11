@@ -1,6 +1,8 @@
 package ro.pub.cs.systems.eim.lab10.googlemapslocationupdate.view;
 
+import android.content.pm.PackageManager;
 import android.location.Location;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -127,6 +129,7 @@ public class GoogleMapsActivity extends AppCompatActivity implements GoogleApiCl
         @Override
         public void onNothingSelected(AdapterView<?> adapterView) { }
     }
+    private static final int MY_PERMISSIONS_REQUEST_READ_FINE_LOCATION = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,6 +161,16 @@ public class GoogleMapsActivity extends AppCompatActivity implements GoogleApiCl
 
         if (savedInstanceState != null) {
             restoreValues(savedInstanceState);
+        }
+
+
+        // Check for permission
+        if (ContextCompat.checkSelfPermission(this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                    this, // Activity
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_READ_FINE_LOCATION );
         }
 
     }

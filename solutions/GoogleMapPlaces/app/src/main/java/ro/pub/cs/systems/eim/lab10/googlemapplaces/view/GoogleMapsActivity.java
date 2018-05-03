@@ -123,7 +123,9 @@ public class GoogleMapsActivity extends AppCompatActivity implements GoogleApiCl
             MarkerOptions markerOptions = new MarkerOptions()
                     .position(new LatLng(latitudeValue, latitudeValue))
                     .title(nameContent)
-                    .icon(BitmapDescriptorFactory.defaultMarker(Utilities.getDefaultMarker(markerTypeSpinner.getSelectedItemPosition())));
+                    .icon(BitmapDescriptorFactory.defaultMarker(Utilities.getDefaultMarker(markerTypeSpinner.getSelectedItemPosition()))
+
+                    );
             googleMap.addMarker(markerOptions);
 
             places.add(new Place(
