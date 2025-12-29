@@ -1,14 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "28.0.3"
+    namespace = 'ro.pub.cs.systems.eim.lab10'
+    compileSdk = 34
     defaultConfig {
-        applicationId "ro.pub.cs.systems.eim.lab10"
-        minSdkVersion 24
-        targetSdkVersion 27
+        applicationId = "ro.pub.cs.systems.eim.lab10"
+        minSdk = 24
+        targetSdk = 34
         versionCode 1
         versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildTypes {
         release {

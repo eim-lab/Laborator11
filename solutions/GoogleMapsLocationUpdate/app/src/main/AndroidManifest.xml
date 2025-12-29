@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ro.pub.cs.systems.eim.lab10">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <permission
         android:name="ro.pub.cs.systems.eim.lab10.googlemapplaces.permission.MAPS_RECEIVE"
@@ -33,7 +32,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".googlemapslocationupdate.view.GoogleMapsActivity">
+        <activity 
+            android:name=".googlemapslocationupdate.view.GoogleMapsActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
