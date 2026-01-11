@@ -39,3 +39,10 @@ project(":solutions-gson-2.8.0").projectDir = file("solutions/GoogleMapsGeofenci
 
 include(":solutions-google-maps-location-update-app")
 project(":solutions-google-maps-location-update-app").projectDir = file("solutions/GoogleMapsLocationUpdate/app")
+
+// Include Kotlin projects
+include(":labtasks-kotlin-google-map-places-app")
+project(":labtasks-kotlin-google-map-places-app").projectDir = file("labtasks-kotlin-GoogleMapPlaces/app")
+
+include(":solutions-kotlin-google-map-places-app")
+project(":solutions-kotlin-google-map-places-app").projectDir = file("solutions-kotlin-GoogleMapPlaces/app")
