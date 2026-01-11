@@ -14,7 +14,7 @@ import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.MapFragment
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
@@ -174,7 +174,7 @@ class GoogleMapsActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallba
             googleApiClient!!.connect()
         }
         if (googleMap == null) {
-            (supportFragmentManager.findFragmentById(R.id.google_map) as? MapFragment)?.getMapAsync(object : OnMapReadyCallback {
+            (supportFragmentManager.findFragmentById(R.id.google_map) as? SupportMapFragment)?.getMapAsync(object : OnMapReadyCallback {
                 override fun onMapReady(readyGoogleMap: GoogleMap) {
                     googleMap = readyGoogleMap
                 }
